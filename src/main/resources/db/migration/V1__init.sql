@@ -2,7 +2,7 @@ CREATE SCHEMA IF NOT EXISTS users;
 
 CREATE TABLE IF NOT EXISTS users.users (
   id                         BIGINT PRIMARY KEY ,
-  nickname                   VARCHAR(255) NOT NULL,
+  username                   VARCHAR(255) NOT NULL,
   email                      VARCHAR(255) NOT NULL,
   password                   TEXT,
   first_name                 VARCHAR(255) NOT NULL,

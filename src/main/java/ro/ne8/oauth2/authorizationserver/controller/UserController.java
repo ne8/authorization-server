@@ -61,7 +61,7 @@ public class UserController {
         UserController.LOGGER.debug("creating new user");
         this.userFacade.save(userDTO);
         final HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setLocation(ucBuilder.path("/users/{id}").buildAndExpand(userDTO.getNickname()).toUri());
+        httpHeaders.setLocation(ucBuilder.path("/users/{id}").buildAndExpand(userDTO.getUsername()).toUri());
         return new ResponseEntity<>(httpHeaders, HttpStatus.CREATED);
     }
 

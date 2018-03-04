@@ -21,7 +21,7 @@ import java.util.List;
 public class CustomUserDetailsService implements UserDetailsService {
     private final static Logger LOGGER = Logger.getLogger(CustomUserDetailsService.class);
     private static final String STATE_ACTIVE = "Active";
-    public static final String ROLE_PREFIX_REQUIRED_BY_SPRING_SECURITY_CONTEXT = "ROLE_";
+    private static final String ROLE_PREFIX_REQUIRED_BY_SPRING_SECURITY_CONTEXT = "ROLE_";
 
     @Autowired
     private UserService userService;
@@ -30,12 +30,12 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(final String nickname) throws UsernameNotFoundException {
         LOGGER.debug("trying to fetch user with nickname:" + nickname);
-        final UserEntity userEntity = this.userService.findByNickname(nickname);
+        final UserEntity userEntity = this.userService.findByUsername(nickname);
         if (userEntity == null) {
             LOGGER.error("user not found");
             throw new UsernameNotFoundException("User not found");
         }
-        final User springSecurityUser = new User(userEntity.getNickname(), userEntity.getPassword(),
+        final User springSecurityUser = new User(userEntity.getUsername(), userEntity.getPassword(),
                 userEntity.getState().equals(STATE_ACTIVE), userEntity.isAccountNonExpired(),
                 userEntity.isCredentialsNonExpired(), userEntity.isAccountNonLocked(), this.getGrantedAuthorities(userEntity));
 

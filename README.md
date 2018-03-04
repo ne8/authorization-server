@@ -13,7 +13,7 @@
               "email": "cpatrut@outlook.com",
               "firstName": "Catalin",
               "lastName": "Patrut",
-              "nickname": "bill2",
+              "username": "bill2",
               "password": "abc123"
             }' 'http://localhost:8080/users/'`
             

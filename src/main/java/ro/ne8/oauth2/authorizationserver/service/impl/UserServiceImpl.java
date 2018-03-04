@@ -64,8 +64,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserEntity findByNickname(final String nickname) {
-        return this.userRepository.findByNickname(nickname);
+    public UserEntity findByUsername(final String username) {
+        return this.userRepository.findByUsername(username);
     }
 
     private Set<UserRoleEntity> createAndSaveDefaultRolesForUser() {

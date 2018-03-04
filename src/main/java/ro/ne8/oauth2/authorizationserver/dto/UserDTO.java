@@ -24,7 +24,7 @@ public class UserDTO {
     @NotNull
     @Size(min = 2, max = 255)
     @ApiModelProperty(required = true)
-    private String nickname;
+    private String username;
 
     @NotNull
     @Size(min = 2, max = 255)
@@ -69,12 +69,12 @@ public class UserDTO {
         this.email = email;
     }
 
-    public String getNickname() {
-        return this.nickname;
+    public String getUsername() {
+        return this.username;
     }
 
-    public void setNickname(final String nickname) {
-        this.nickname = nickname;
+    public void setUsername(final String username) {
+        this.username = username;
     }
 
     public String getFirstName() {

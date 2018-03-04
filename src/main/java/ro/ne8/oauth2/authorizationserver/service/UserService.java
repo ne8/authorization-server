@@ -16,6 +16,6 @@ public interface UserService {
 
     void delete(UserEntity userEntity);
 
-    UserEntity findByNickname(String nickname);
+    UserEntity findByUsername(String nickname);
 
 }
