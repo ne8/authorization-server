@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
-@ApiModel(description = "Spring security user object")
+@ApiModel(description = "DTO for used for user operations")
 public class UserDTO {
 
 
@@ -41,24 +41,25 @@ public class UserDTO {
     @ApiModelProperty(required = true)
     private String password;
 
-    private Date creationDate = new Date();
+    @ApiModelProperty(readOnly = true)
+    private Date creationDate;
 
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(readOnly = true)
     private String type;
 
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(readOnly = true)
     private String state;
 
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(readOnly = true)
     private boolean isAccountNonExpired;
 
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(readOnly = true)
     private boolean isAccountNonLocked;
 
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(readOnly = true)
     private boolean isCredentialsNonExpired;
 
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(readOnly = true)
     private boolean isEnabled;
 
     public String getEmail() {

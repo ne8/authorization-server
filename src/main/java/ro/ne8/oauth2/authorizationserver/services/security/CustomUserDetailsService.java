@@ -1,4 +1,4 @@
-package ro.ne8.oauth2.authorizationserver.service.security;
+package ro.ne8.oauth2.authorizationserver.services.security;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ro.ne8.oauth2.authorizationserver.entities.UserEntity;
 import ro.ne8.oauth2.authorizationserver.entities.UserRoleEntity;
-import ro.ne8.oauth2.authorizationserver.service.UserService;
+import ro.ne8.oauth2.authorizationserver.services.UserService;
 
 import java.util.ArrayList;
 import java.util.List;

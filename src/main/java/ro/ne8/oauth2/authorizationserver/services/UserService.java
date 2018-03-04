@@ -1,4 +1,4 @@
-package ro.ne8.oauth2.authorizationserver.service;
+package ro.ne8.oauth2.authorizationserver.services;
 
 
 import ro.ne8.oauth2.authorizationserver.entities.UserEntity;

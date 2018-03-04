@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import ro.ne8.oauth2.authorizationserver.dto.UserDTO;
 import ro.ne8.oauth2.authorizationserver.entities.UserEntity;
 import ro.ne8.oauth2.authorizationserver.facades.UserFacade;
-import ro.ne8.oauth2.authorizationserver.service.UserService;
+import ro.ne8.oauth2.authorizationserver.services.UserService;
 
 import java.util.ArrayList;
 import java.util.List;

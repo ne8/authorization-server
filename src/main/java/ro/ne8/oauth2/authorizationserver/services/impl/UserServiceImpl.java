@@ -1,4 +1,4 @@
-package ro.ne8.oauth2.authorizationserver.service.impl;
+package ro.ne8.oauth2.authorizationserver.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -7,7 +7,7 @@ import ro.ne8.oauth2.authorizationserver.entities.UserEntity;
 import ro.ne8.oauth2.authorizationserver.entities.UserRoleEntity;
 import ro.ne8.oauth2.authorizationserver.repositories.UserRepository;
 import ro.ne8.oauth2.authorizationserver.repositories.UserRoleRepository;
-import ro.ne8.oauth2.authorizationserver.service.UserService;
+import ro.ne8.oauth2.authorizationserver.services.UserService;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
