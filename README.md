@@ -1,10 +1,11 @@
-## Steps for running this service locally
+## Steps for running this service locally:
 
 1. clone this repository
 2. Import this project in InteliJ as a maven project
-3. run it by either running in terminal : mvn spring-boot:run or by running the main class AuthorizationServerApplication.java
+3. You'll firstly need to run a postgres database, you can run one by using docker and the following command: `docker run -p 5432:5432 postgres:9.5`
+4. run it by either running in terminal : mvn spring-boot:run or by running the main class AuthorizationServerApplication.java
 
-### Steps for using it.
+### Steps for using it:
 1. Firstly you'll need to create a user. You can do so by:
     * navigating to [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) and selecting the post `users` option.
     * using curl, for example:
