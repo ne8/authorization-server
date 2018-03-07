@@ -41,25 +41,25 @@ public class UserDTO {
     @ApiModelProperty(required = true)
     private String password;
 
-    @ApiModelProperty(readOnly = true)
+    @ApiModelProperty(hidden = true)
     private Date creationDate;
 
-    @ApiModelProperty(readOnly = true)
+    @ApiModelProperty(hidden = true)
     private String type;
 
-    @ApiModelProperty(readOnly = true)
+    @ApiModelProperty(hidden = true)
     private String state;
 
-    @ApiModelProperty(readOnly = true)
+    @ApiModelProperty(hidden = true)
     private boolean isAccountNonExpired;
 
-    @ApiModelProperty(readOnly = true)
+    @ApiModelProperty(hidden = true)
     private boolean isAccountNonLocked;
 
-    @ApiModelProperty(readOnly = true)
+    @ApiModelProperty(hidden = true)
     private boolean isCredentialsNonExpired;
 
-    @ApiModelProperty(readOnly = true)
+    @ApiModelProperty(hidden = true)
     private boolean isEnabled;
 
     public String getEmail() {
