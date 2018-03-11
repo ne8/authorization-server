@@ -1,1 +1,1 @@
-#!/bin/bash  mvn clean install
+#!/bin/bash  docker pull nginx
