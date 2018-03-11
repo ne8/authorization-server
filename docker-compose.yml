@@ -2,8 +2,7 @@ version: '3'
 services:
 
   admin:
-#    image: cpatrut/mail-sender:1.0.3
-    build: .
+    image: cpatrut/authorization-server
     ports:
      - "8080:8080"
     depends_on:
