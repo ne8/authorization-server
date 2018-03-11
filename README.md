@@ -25,4 +25,8 @@
        --header 'postman-token: b3aec035-5f30-1bb7-c4c2-985c0af85bdf'`
        
        
-      
+### Docker build process
+In order to generate secure access tokens a third party library fro Bouncy Castle has been used, more details about it can be found in here
+[https://www.bouncycastle.org/fips-java/](https://www.bouncycastle.org/fips-java/) .
+
+Given the fact that the library is not publicly exposed it has been added as a binary at this repository and configured to be used by docker in the `pre_build` hook.
