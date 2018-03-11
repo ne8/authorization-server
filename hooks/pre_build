@@ -1,1 +1,6 @@
-RUN  docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install
+        #!/bin/bash
+                echo "=> Building the binary"
+                docker run --privileged \
+                -v $(pwd):/src \
+                -v /var/run/docker.sock:/var/run/docker.sock \
+                centurylink/golang-builder
