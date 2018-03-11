@@ -1,3 +1,4 @@
-    #!/bin/bash
-        echo wtf?
-        mvn clean install
+#!/bin/bash
+
+echo wtf?
+mvn clean install
