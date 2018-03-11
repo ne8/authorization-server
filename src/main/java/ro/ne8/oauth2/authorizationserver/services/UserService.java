@@ -1,4 +1,4 @@
-package ro.ne8.oauth2.authorizationserver.service;
+package ro.ne8.oauth2.authorizationserver.services;
 
 
 import ro.ne8.oauth2.authorizationserver.entities.UserEntity;
@@ -16,6 +16,6 @@ public interface UserService {
 
     void delete(UserEntity userEntity);
 
-    UserEntity findByNickname(String nickname);
+    UserEntity findByUsername(String nickname);
 
 }

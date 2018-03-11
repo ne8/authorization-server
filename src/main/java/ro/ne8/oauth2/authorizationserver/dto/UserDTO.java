@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
-@ApiModel(description = "Spring security user object")
+@ApiModel(description = "DTO for used for user operations")
 public class UserDTO {
 
 
@@ -24,7 +24,7 @@ public class UserDTO {
     @NotNull
     @Size(min = 2, max = 255)
     @ApiModelProperty(required = true)
-    private String nickname;
+    private String username;
 
     @NotNull
     @Size(min = 2, max = 255)
@@ -41,7 +41,8 @@ public class UserDTO {
     @ApiModelProperty(required = true)
     private String password;
 
-    private Date creationDate = new Date();
+    @ApiModelProperty(hidden = true)
+    private Date creationDate;
 
     @ApiModelProperty(hidden = true)
     private String type;
@@ -69,12 +70,12 @@ public class UserDTO {
         this.email = email;
     }
 
-    public String getNickname() {
-        return this.nickname;
+    public String getUsername() {
+        return this.username;
     }
 
-    public void setNickname(final String nickname) {
-        this.nickname = nickname;
+    public void setUsername(final String username) {
+        this.username = username;
     }
 
     public String getFirstName() {

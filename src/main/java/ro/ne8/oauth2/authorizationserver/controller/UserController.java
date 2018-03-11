@@ -46,7 +46,7 @@ public class UserController {
     }
 
     @ApiOperation(
-            value = "Retrieves one user from the database. Note that the password is hashed",
+            value = "Retrieves one user from the database. ",
             response = UserDTO.class)
     @ApiResponses({
             @ApiResponse(code = 200, responseContainer = "List", response = UserDTO.class, message = "User retrieved successfully")})
@@ -61,7 +61,7 @@ public class UserController {
         UserController.LOGGER.debug("creating new user");
         this.userFacade.save(userDTO);
         final HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setLocation(ucBuilder.path("/users/{id}").buildAndExpand(userDTO.getNickname()).toUri());
+        httpHeaders.setLocation(ucBuilder.path("/users/{id}").buildAndExpand(userDTO.getUsername()).toUri());
         return new ResponseEntity<>(httpHeaders, HttpStatus.CREATED);
     }
 
@@ -74,6 +74,7 @@ public class UserController {
     public ResponseEntity<Void> delete(@PathVariable("id") final Long id) {
         UserController.LOGGER.debug("removing user based on email");
         final UserDTO userDTO = this.userFacade.getById(id);
+        //TODO: USE deleteById at repository level
         this.userFacade.delete(userDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }

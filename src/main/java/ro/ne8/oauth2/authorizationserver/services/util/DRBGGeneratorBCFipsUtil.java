@@ -1,4 +1,4 @@
-package ro.ne8.oauth2.authorizationserver.service.util;
+package ro.ne8.oauth2.authorizationserver.services.util;
 
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.bouncycastle.crypto.EntropySourceProvider;

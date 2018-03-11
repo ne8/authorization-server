@@ -16,8 +16,8 @@ public class UserEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "nickname", nullable = false)
-    private String nickname;
+    @Column(name = "username", nullable = false)
+    private String username;
 
     @Column(name = "email", nullable = false)
     private String email;
@@ -68,12 +68,12 @@ public class UserEntity implements Serializable {
         this.id = id;
     }
 
-    public String getNickname() {
-        return this.nickname;
+    public String getUsername() {
+        return this.username;
     }
 
-    public void setNickname(final String nickname) {
-        this.nickname = nickname;
+    public void setUsername(final String username) {
+        this.username = username;
     }
 
     public String getEmail() {
