@@ -16,7 +16,6 @@ import java.text.SimpleDateFormat;
 import java.util.Base64;
 
 
-@Service
 public class DRBGGeneratorBCFipsUtil {
 
 
@@ -33,9 +32,9 @@ public class DRBGGeneratorBCFipsUtil {
     private static final byte[] personalizationString = Strings.toUTF8ByteArray(new VMID().toString());
 
     static {
-        Security.addProvider(new BouncyCastleFipsProvider());
         DRBGGeneratorBCFipsUtil.setUpgradedDefaultDeterministicRandomNumberGenerator();
     }
+
 
 
     public static String generateSHA512RandomString() {

@@ -1,12 +1,12 @@
 version: '3'
 services:
 
-  admin:
-    image: cpatrut/authorization-server
+  authorization-server:
+    build: .
     ports:
      - "8080:8080"
     depends_on:
-      - db
+      - authorization-server-db
   authorization-server-db:
     image: postgres:9.5
     ports:
