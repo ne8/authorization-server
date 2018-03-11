@@ -7,7 +7,7 @@ services:
      - "8080:8080"
     depends_on:
       - db
-  db:
+  authorization-server-db:
     image: postgres:9.5
     ports:
      - "5432:5432"
