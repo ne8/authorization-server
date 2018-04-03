@@ -3,11 +3,13 @@ services:
 
   authorization-server:
     build: .
+    container_name: authorization-server
     ports:
      - "8080:8080"
     depends_on:
       - authorization-server-db
   authorization-server-db:
+    container_name: authorization-server-db
     image: postgres:9.5
     ports:
      - "5432:5432"
