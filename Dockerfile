@@ -6,4 +6,3 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/authorizat
 HEALTHCHECK --interval=1s --timeout=3s \
   CMD curl -f -X GET --header 'Accept: application/json'   --header 'content-type: application/json'  'http://localhost:8080/users/' || exit 0
 
-asds
